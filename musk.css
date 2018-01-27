@@ -1,0 +1,240 @@
+body {
+  font-family: "Source Sans Pro", Helvetica, sans-serif;
+  font-weight: 300;
+  background: #0b0b0b;
+  color: white;
+  line-height: 1.5em;
+}
+
+img {
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY( 75px );
+  transition: 0.75s;
+}
+
+img.visible {
+  visibility: visible;
+  opacity: 1;
+  transform: none;
+}
+
+.parallax-container {
+  max-height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  perspective: 2px;
+  padding: 0px;
+}
+
+.parallax {
+  position: relative;
+  overflow: hidden;
+}
+
+.parallax::after {
+  content: " ";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transform: translateZ(-1px) scale(1.5);
+  background-size: contain;
+  z-index: -1;
+  min-height: 100vh;
+}
+
+.row {
+  padding: 0px 20px;
+}
+
+.header-image {
+  min-height: 160vw;
+}
+
+#logo {
+  max-width: 300px;
+  height: 100px;
+  margin: calc(60px + 15vw) auto 0px;
+  background: url("images/logo.png") 50% 0px no-repeat;
+  background-size: contain;
+}
+
+.header-image::after {
+  background-image: url("images/elon-musk-small.jpg");
+}
+
+.our-process .row {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.our-process::after {
+  background-image: url("images/dark-space.jpg");
+  background-size: cover;
+}
+
+.process-point {
+  text-align: center;
+}
+
+.process-point:not(:last-child) {
+  margin-bottom: 30px;
+}
+
+.process-point img {
+  max-height: 150px;
+  margin-bottom: 30px;
+}
+
+.product-image {
+  text-align: center;
+  margin-bottom: 60px;
+  padding: 0px 15%;
+}
+
+.product-image-container{
+  max-width: 300px;
+  display: inline-block;
+}
+
+.product-info {
+  background: #000000;
+}
+
+.learn-more {
+  background: #000000;
+}
+
+.product-info,
+.learn-more {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.product-intro p {
+  margin-top: 15px;
+}
+
+.product-intro ul {
+  margin-top: 20px;
+  list-style-type: none;
+  padding-left: 0px;
+}
+
+.product-intro li {
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+
+.product-intro label,
+.notes {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.product-intro label {
+  width: 95px;
+}
+
+.notes {
+  width: calc(100% - 95px);
+}
+
+.sign-up-container {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 600px;
+  text-align: center;
+}
+
+.sign-up-form {
+  position: relative;
+  margin-top: 40px;
+}
+
+.sign-up-form .btn {
+  color: #ffffff;
+  border-color: #ffffff;
+  background-color: #000000;
+  transition: background-color 0.25s;
+}
+
+.sign-up-form .btn:hover {
+  background-color: #034055;
+}
+
+.sign-up-form .btn:active {
+  background-color: #012a38;
+}
+
+#success-message {
+  position: absolute;
+  top: 0px;
+  text-align: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.25s;
+}
+
+#error-message {
+  background: #ea5b5b;
+  padding: 5px 10px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.25s;
+}
+
+.error #error-message,
+.success #success-message {
+  visibility: visible;
+  opacity: 1;
+}
+
+.success #email-submit-form-group {
+  visibility: hidden;
+  opacity: 0;
+}
+
+@media (min-width: 768px) {
+  .product-image {
+    margin-bottom: 0px;
+    padding: 0px 10px;
+  }
+
+  .header-image {
+    min-height: 60vw;
+  }
+
+  .header-image::after {
+    background-image: url("images/elon-musk.jpg");
+  }
+
+  .product-intro ul {
+    padding-left: 20px;
+  }
+
+  .process-point {
+    margin-bottom: 0px;
+  }
+
+  .process-point.mixing img {
+    transition-delay: 0.5s;
+  }
+
+  .process-point.delivery img {
+    transition-delay: 1s;
+  }
+
+}
+
+@media (min-width: 1090px) {
+  .header-image {
+    min-height: 600px;
+  }
+
+  .header-image::after {
+    background-size: cover;
+  }
+}

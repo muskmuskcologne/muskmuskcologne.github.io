@@ -1,0 +1,91 @@
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Musk musk</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="The electrifying new cologne that smells like Elon Musk">
+  <meta property="og:title" content="Musk musk">
+  <meta property="og:description" content="The electrifying new cologne that smells like Elon Musk">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="http://www.muskmusk.com">
+  <meta property="og:image" content="elon-og.jpg">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+  <link rel="stylesheet" href="musk.css">
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300" rel="stylesheet">
+  <script src="https://www.gstatic.com/firebasejs/4.8.2/firebase.js"></script>
+  <script src="musk.js"></script>
+</head>
+
+<body>
+  <div class="parallax-container" id="parallax-body">
+    <div class="parallax header-image">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-5 offset-md-7">
+            <div id="logo"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="static product-info">
+      <div class="container">
+        <div class="row">
+          <div class="product-image col-md-5 col-lg-4 offset-lg-1">
+            <div class="product-image-container">
+              <img class="img-fluid" src="images/bottle.png" srcset="images/bottle@2x.png 600w" alt="Spritz yourself with the invigorating essence of Elon Musk">
+            </div>
+          </div>
+          <div class="product-intro col-md-7 col-lg-6">
+            <h1>It's out of this world</h1>
+            <p>Not for the boring&mdash;this electrifying new cologne will throw you for a loop. Everyone knows that scent is an important weapon in any founder's toolkit; now, we've bottled the sweet smell of one man's success and are making it available to everyone. Don't miss out!</p> 
+              <ul>
+                <li><label>Top notes: </label><span class="notes">thunderstorms, ozone, a single dollar&nbsp;bill</span></li>
+                <li><label>Middle notes: </label><span class="notes">hot iron, new car smell, alfisol&nbsp;soil</span></li>
+                <li><label>Base notes: </label><span class="notes">braai, rocket fuel, solar&nbsp;musk</span></li>
+              </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="parallax our-process">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-4 process-point research">
+            <img src="images/aromachologist.png" alt="An essence investigator">
+            <h3>Rigorously researched</h3>
+            <p>Our aromachologists have diligently followed Elon Musk to gain a hyper-accurate picture of his&nbsp;musk.</p>
+          </div>
+          <div class="col-sm-4 process-point mixing">
+            <img src="images/scientist.png" alt="A persistent perfumer">
+            <h3>Precisely formulated</h3>
+            <p>We've been mixing and modifying our formula again and again until we get it just&nbsp;right.</p>
+          </div>
+          <div class="col-sm-4 process-point delivery">
+            <img src="images/happy-customer.png" alt="A Musk in the making">
+            <h3>Guaranteed to please</h3>
+            <p>Smelling like Elon is the first step to becoming like Elon. Jump-start your future&nbsp;today!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="static learn-more">
+      <div class="container-fluid">
+        <div class="sign-up-container">
+          <h1>Want to learn more?</h1>
+          <p>Submit your email below and we'll let you know when Musk musk becomes available</p>
+          <form class="sign-up-form" id="email-submit">
+            <div class="form-group" id="email-submit-form-group">
+              <div class="input-group">
+                <input type="email" class="form-control" id="learn-more-email" name="email" placeholder="Email address">
+                <div class="input-group-append">
+                  <button class="btn" type="submit" id="email-submit-button">Submit</button>
+                </div>
+              </div>
+            </div>
+            <div id="success-message"><h4>Thank you for your interest!</h4></div>
+            <div id="error-message"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
