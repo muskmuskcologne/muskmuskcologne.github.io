@@ -59,11 +59,13 @@ document.addEventListener( "DOMContentLoaded", function( e ) {
     xhr.open( "POST", "https://formspree.io/muskmuskcologne@gmail.com" );
     xhr.setRequestHeader( "Accept", "application/json" );
     xhr.onreadystatechange = function () {
-      if( xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200 ) {
-        form.classList.add( "success" );
-      } else {
-        error.innerText = "There was an error submitting your email address. Please try again."
-        form.classList.add( "error" );
+      if( xhr.readyState === XMLHttpRequest.DONE ) {
+        if( xhr.status === 200 ) {
+          form.classList.add( "success" );
+        } else {
+          error.innerText = "There was an error submitting your email address. Please try again."
+          form.classList.add( "error" );
+        }
       }
     };
     xhr.send( formData );

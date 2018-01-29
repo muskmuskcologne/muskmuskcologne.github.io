@@ -172,6 +172,7 @@ img.visible {
 #success-message {
   position: absolute;
   top: 0px;
+  width: 100%;
   text-align: center;
   visibility: hidden;
   opacity: 0;
