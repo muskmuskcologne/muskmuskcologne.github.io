@@ -7,7 +7,7 @@ function isValidEmail( email ) {
 function getYDistance( node, parent ) {
   var curr = node;
   var offsetY = 0;
-  while( curr !== parent ) {
+  while( curr !== parent && curr !== null ) {
     offsetY += curr.offsetTop;
     curr = curr.offsetParent;
     if( curr === document ) {
